@@ -72,8 +72,8 @@ function App() {
   }, [selectedRegion, selectedTimeframe]);
 
   const handleDownloadCsv = () => {
-    // We also updated this to pull from the REAL state data
-    const data = dashboardData.transactions; 
+    
+    const data = dashboardData.rawData;
     if (!data || !data.length) return;
 
     const headers = Object.keys(data[0]).join(',');

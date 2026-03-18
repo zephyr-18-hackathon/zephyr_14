@@ -122,7 +122,7 @@ app.http('getDashboardData', {
                     amount: parseFloat(row['total_revenue'] || 0),
                     status: 'Completed'
                 })),
-
+                rawData: filteredData,
                 trend: [
                     { month: 'Jan', revenue: totalRevenue * 0.1 },
                     { month: 'Feb', revenue: totalRevenue * 0.15 },
